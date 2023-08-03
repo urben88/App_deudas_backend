@@ -1,0 +1,11 @@
+{
+  "body": {
+    "content": "ewoidXN1YXJpbyI6InJ1YmVuIiwKInBhc3N3b3JkIjoiMTIzIgp9",
+    "file": false,
+    "fileSize": false
+  },
+  "headers": {},
+  "method": "GET",
+  "title": "Register",
+  "url": "http://localhost:3000/api/auth/register"
+}

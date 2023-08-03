@@ -1,0 +1,13 @@
+{
+  "body": {
+    "content": "",
+    "file": false,
+    "fileSize": false
+  },
+  "headers": {
+    "authorization": ""
+  },
+  "method": "GET",
+  "title": "New HTTP Request",
+  "url": "http://localhost:3000/api/auth/refreshToken"
+}

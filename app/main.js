@@ -1,12 +1,16 @@
 const express = require('express')
-const usuario = require('./routes/usuarioRoutes')
-const auth = require('./routes/authRoutes')
 const cors = require('cors')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 var timeout = require('connect-timeout');
 const {sequelize} = require('./db/models');
+
 const authMiddelware = require('./middelwares/auth')
+
+//? Routes
+const usuario = require('./routes/usuarioRoutes')
+const auth = require('./routes/authRoutes')
+const info = require('./routes/infoRoutes')
 class Aplicacion {
 
     app
@@ -43,6 +47,7 @@ class Aplicacion {
      routing(){
         this.app.use('/api/usuario',authMiddelware,usuario)
         this.app.use('/api/auth',auth)
+        this.app.use('/api/info',info)
      }
 
     //? Uso el sequeleze del arhcivo de models/indes.js para hacer la conexión  a la base de datos

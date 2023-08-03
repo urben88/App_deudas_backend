@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "677c1fc2-f784-4aaf-b292-0a25deaf22ed",
+		"name": "App deudas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "prueba",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6eyJ2YWwiOiJDVVJSRU5UX1RJTUVTVEFNUCJ9LCJ1cGRhdGVkQXQiOnsidmFsIjoiQ1VSUkVOVF9USU1FU1RBTVAifSwiaWQiOjEsInVzdWFyaW8iOiJyZW4iLCJhY3RpdmFkYSI6dHJ1ZSwicGFzc3dvcmQiOiIkMmEkMTAkREpxaXc4TGhidy4vTkZxV2MyQ2MvT05iWVhqaW94U204Y2pUZ3poTmUxRFp6VnJCejlEQ0cifSwiaWF0IjoxNjkwNzUwNjMyLCJleHAiOjE2OTEzNTU0MzJ9.1kAXhdf1TvgYbC4T-thh29OXgBSqH3YcEaqFzVBowUc",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}api/usuario",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"ren\",\r\n    \"password\":\"guy\",\r\n    \"activada\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/usuario/create",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"usuario",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"ren\",\r\n    \"password\":\"guy\",\r\n    \"activada\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/auth/register",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"usuario\":\"ren\",\r\n    \"password\":\"guy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/auth/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
